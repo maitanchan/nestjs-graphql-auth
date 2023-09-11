@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: String!
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+  role: String!
+}
+
+type Query {
+  findUserByEmail(email: String!): User!
+  login(email: String!, password: String!): String!
+  securedDataAdmin: String!
+  securedDataUser: String!
+}
