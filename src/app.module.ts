@@ -14,6 +14,7 @@ import { AuthModule } from './auth/auth.module';
     ConfigModule.forRoot({
 
       envFilePath: ['.env.development'],
+
       isGlobal: true
 
     }),
@@ -21,12 +22,12 @@ import { AuthModule } from './auth/auth.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
 
       driver: ApolloDriver,
+
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
 
     }),
 
     TypeOrmModule.forRoot({
-
       type: 'postgres',
       host: process.env.HOST,
       port: 5432,
@@ -35,7 +36,6 @@ import { AuthModule } from './auth/auth.module';
       password: process.env.DATABASE_PASSWORD,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true
-
     }),
 
     UsersModule,

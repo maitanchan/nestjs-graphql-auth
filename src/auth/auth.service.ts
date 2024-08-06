@@ -10,13 +10,11 @@ export class AuthService {
     login(user: User): string {
 
         const payload = {
-
             id: user.id,
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
             role: user.role
-
         }
 
         const token = this.jwtService.sign(payload)

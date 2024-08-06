@@ -15,19 +15,23 @@ import { JwtGuard } from "./guard/jwt.guard";
         JwtModule.register({
 
             secret: 'key',
-            signOptions: {
-                expiresIn: '1h'
-            }
+
+            signOptions: { expiresIn: '1h' }
 
         })
 
     ],
 
     providers: [
+
         AuthResolver,
+
         AuthService,
+
         AuthGuard,
+
         JwtGuard
+
     ]
 
 })
